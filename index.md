@@ -838,10 +838,17 @@ Install it on your system
 ]
 
 https://www.rust-lang.org/install.html
+
 ---
 class: impact, dark-mode-cog
 
 # .oxide.small[There is still more to discover]
+
+---
+
+class: impact, dark-mode-cog
+
+# .oxide.small[Questions?]
 
 ---
 class: impact, dark-mode-cog
@@ -867,6 +874,7 @@ class: impact, dark-mode-cog
 class: impact, dark-mode-cog
 
 # .oxide.small[Thanks  😀]
+
 ---
 
 # Acknowledgement
@@ -876,7 +884,6 @@ class: impact, dark-mode-cog
 - Content based on [Introduction to Rust](https://gitlab.com/integer32llc/sec-app-dev-2018) by **Jake Goulding**
  and used with permission
 
----
 
 
 
