@@ -99,13 +99,18 @@ class: center, middle
 
 ---
 # Speed
---
 
 .center.middle[![parse logs](parse-log-230x.png)]
 
 ---
+# Speed
+
+.center[<img src="zeit.png" alt="zeit now" style="width:70%">]
+
+
+
+---
 # Safety
---
 
 > Guarantees memory safety
 
@@ -120,7 +125,7 @@ You will never endure:
 
 ---
 # Concurrency
---
+
 
 > Fearless concurrency
 
