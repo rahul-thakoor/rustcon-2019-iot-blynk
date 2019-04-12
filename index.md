@@ -25,15 +25,20 @@ class:middle
 - Student at SUPINFO International University
 --
 
-- **Increasing Rust's Reach 2018**
---
-
 - Creating **rust_gpiozero**
 --
 
 - Physical computing with Rust
-  
 
+--
+
+- **Increasing Rust's Reach 2018**
+
+
+---
+class:center,middle
+
+<img src="irr2018.png" alt="increasing rust's reach 2018" style="width:80%">
 ---
 
 # Agenda
@@ -57,6 +62,10 @@ class: center, middle
 
 ## World's first Rust consultancy company
 
+---
+# Rust in Motion
+
+<img src="rust_in_motion.png" alt="rust in motion" style="width:100%">
 ---
 
 class: impact, dark-mode-cog
@@ -132,18 +141,42 @@ class: center, middle
 
 Rust allows you to build skills that transfer from one domain to another; you can learn Rust by writing a web app, then apply those same skills to target your Raspberry Pi
 
+---
+.center[<img src="most_loved_2016.png" alt="stackoverflow 2016" style="width:80%">]
 
+Stack Overflow Developer Survey 2016
+---
+.center[<img src="most_loved_2017.png" alt="stackoverflow 2017" style="width:80%">]
+
+Stack Overflow Developer Survey 2017
+---
+.center[<img src="most_loved_2018.png" alt="stackoverflow 2018" style="width:80%">]
+
+Stack Overflow Developer Survey 2018
+---
+.center[<img src="most_loved_2019.png" alt="stackoverflow 2019" style="width:80%">]
+
+Stack Overflow Developer Survey 2019
 ---
 class: impact, dark-mode-cog
 
 # .oxide[Hello Rust]
 
 ---
+class: dark-mode-cog,light-bg
+
+.center[<img src="logo.png" alt="rust logo" style="width:50%">]
+
+---
+.center[<img src="animated-ferris.gif" alt="animated ferris" style="width:50%">]
+http://rustacean.net/
+
+---
 class: center, middle
 
 <!-- ![](hello.svg) -->
 
-<img src="hello.svg" alt="hello world" style="width:100%"> 
+<img src="hello.png" alt="hello world" style="width:100%"> 
 
 ---
 class: impact, dark-mode-cog
@@ -447,19 +480,22 @@ enum Option<T> {
 
 # Pattern matching
 
+<img src="pattern.png" alt="pattern" style="width:80%;"> 
+
+???
 ```rust
-enum Coin {
-    Penny,
-    Nickel,
-    Dime,
-    Quarter,
+enum Direction {
+    North,
+    East,
+    West,
+    South,
 }
-fn value_in_cents(coin: Coin) -> u8 {
-    match coin {
-        Coin::Penny => 1,
-        Coin::Nickel => 5,
-        Coin::Dime => 10,
-        Coin::Quarter => 25,
+fn check_direction(dir: Direction) {
+    match dir {
+        Direction::North => println!("Going North"),
+        Direction::South => println!("Going South"),
+        Direction::East => println!("Going East"),
+        Direction::West => println!("Going West"),
     }
 }
 ```
@@ -545,6 +581,8 @@ class: impact, dark-mode-cog
 - At any given time, you can have either **one mutable** reference or **any number of immutable references**.
 - References must always be **valid**.
 
+<img src="borrow.png" alt="borrow" style="width:100%;">
+???
 ```rust
 let knowledge = Wikipedia::download();
 let a_reference_to_knowledge = &knowledge;
@@ -556,6 +594,9 @@ let a_reference_to_knowledge = &knowledge;
 - At any given time, you can have either **one mutable** reference or **any number of immutable references**.
 - References must always be **valid**.
 
+<img src="borrow_mut.png" alt="borrow" style="width:100%;">
+
+???
 ```rust
 let mut a_book = Book::new();
 let author = &mut a_book;
@@ -564,13 +605,14 @@ let author = &mut a_book;
 ---
 # Borrowing
 
+<img src="borrow_error.png" alt="borrow" style="width:80%;">
+
+???
 ```rust
 let mut a_book = Book::new();
 let author = &mut a_book;
 let reader = &a_book;
 ```
-
---
 
 ```
 error[E0502]: cannot borrow `a_book` as immutable because it
@@ -606,12 +648,15 @@ A build and dependency management tool in one.
 ---
 
 # Crates
-.crates.center[![crates](crates.png)]
+.center[<img src="crates.png" alt="crates" style="width:60%;"> ]
 
 ---
 
 # Testing
+<img src="test.png" alt="TDD" style="width:100%;">
 
+
+???
 ```rust
 #[test]
 fn addition_works() {
@@ -622,7 +667,7 @@ fn addition_works() {
 ---
 
 # Documentation
-.crates.center[![doc](doc.png)]
+.center[<img src="doc.png" alt="doc" style="width:60%;"> ]
 
 ???
 ```rust
@@ -641,6 +686,8 @@ pub fn is_lit(&self) -> bool {
 
 ## clippy
 
+<img src="clippy.png" alt="clippy" style="width:70%;">
+???
 ```rust
 fn main() {
     let x = true;    
@@ -649,7 +696,6 @@ fn main() {
     }
 }
 ```
---
 
 ```
 warning: equality checks against true are unnecessary
@@ -664,7 +710,9 @@ warning: equality checks against true are unnecessary
 # Developer tools
 
 ## rustfmt
+<img src="rustfmt_pre.png" alt="rust fmt" style="width:80%;">
 
+???
 ```rust
 fn main() {
     let x = true;
@@ -679,7 +727,10 @@ fn main() {
 # Developer tools
 
 ## rustfmt
+<img src="rustfmt_post.png" alt="rust fmt" style="width:80%;">
 
+
+???
 ```rust
 fn main() {
     let x = true;
@@ -698,7 +749,7 @@ class: impact, dark-mode-cog
 
 # Community
 
-<img src="community.png" alt="community" style="width:80%;"> 
+.center[<img src="community.png" alt="community" style="width:80%;">]
 
 ---
 
@@ -768,15 +819,51 @@ class: impact, dark-mode-cog
 ---
 
 # Using Rust
-
-.center.middle[<iframe src="https://play.rust-lang.org/" width="100%" height="500px">]
-
-
-
+https://play.rust-lang.org/
+.center.middle[<iframe src="https://play.rust-lang.org/" width="100%" height="475px">]
 
 
 
 ---
+class: center, middle
+.big[
+Install it on your system
+
+`rustup`
+]
+
+https://www.rust-lang.org/install.html
+---
+class: impact, dark-mode-cog
+
+# .oxide.small[There is still more to discover]
+
+---
+class: impact, dark-mode-cog
+
+# .oxide.small[Quiz]
+
+---
+class: impact, dark-mode-cog
+
+# .small[What is the name of Rust's mascot?]
+
+---
+class: impact, dark-mode-cog
+
+# .small[What is Rust's most unique feature?]
+
+---
+class: impact, dark-mode-cog
+
+# .small[How are Rust developers called?]
+
+---
+class: impact, dark-mode-cog
+
+# .oxide.small[Thanks  😀]
+---
+
 # Acknowledgement
 
 - Theme inspired by [rocket.rs](https://rocket.rs/)

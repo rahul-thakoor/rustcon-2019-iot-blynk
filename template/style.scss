@@ -57,6 +57,9 @@ blockquote {
   background-color: $primary;
   color: $light;
 }
+.light-bg{
+  background-color: $light!important;
+}
 .sponsor{
   width:500px;
   & img{

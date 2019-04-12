@@ -49,6 +49,9 @@ blockquote {
   background-color: #272727;
   color: #FFF; }
 
+.light-bg {
+  background-color: #FFF !important; }
+
 .sponsor {
   width: 500px; }
   .sponsor img {
