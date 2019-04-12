@@ -875,6 +875,9 @@ class: impact, dark-mode-cog
 
 # .oxide.small[Thanks  😀]
 
+.big[##ctwdevelopersm19]
+
+for a 40% discount discount on manning.com
 ---
 
 # Acknowledgement
